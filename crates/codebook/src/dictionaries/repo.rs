@@ -146,8 +146,8 @@ static HUNSPELL_DICTIONARIES: LazyLock<Vec<HunspellRepo>> = LazyLock::new(|| {
         ),
         HunspellRepo::new(
             "tr",
-            "https://raw.githubusercontent.com/wooorm/dictionaries/refs/heads/main/dictionaries/tr/index.aff",
-            "https://raw.githubusercontent.com/wooorm/dictionaries/refs/heads/main/dictionaries/tr/index.dic",
+            "https://raw.githubusercontent.com/tdd-ai/hunspell-tr/refs/heads/main/tr_TR.aff",
+            "https://raw.githubusercontent.com/tdd-ai/hunspell-tr/refs/heads/main/tr_TR.dic",
         ),
     ]
 });

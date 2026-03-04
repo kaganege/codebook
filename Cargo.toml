@@ -1,5 +1,11 @@
 [workspace]
-members = ["crates/codebook", "crates/codebook-config", "crates/codebook-lsp", "crates/downloader", "crates/dictionary-builder"]
+members = [
+    "crates/codebook",
+    "crates/codebook-config",
+    "crates/codebook-lsp",
+    "crates/downloader",
+    "crates/dictionary-builder",
+]
 resolver = "2"
 
 [workspace.package]
@@ -26,13 +32,17 @@ lazy_static = "1.5.0"
 log = "0.4.22"
 lru = "0.16"
 regex = "1.11.1"
-reqwest = { version = "^0.13.0", default-features = false, features = ["blocking", "rustls", "json"] }
+reqwest = { version = "^0.13.0", default-features = false, features = [
+    "blocking",
+    "rustls",
+    "json",
+] }
 rustls = { version = "<0.24", features = ["aws-lc-rs"] }
 rustls-platform-verifier = "0.6.0"
 serde = { version = "1", features = ["derive", "serde_derive"] }
 serde_json = "1"
 sha2 = "0.10.6"
-spellbook = "<0.5.0"
+spellbook = { version = "<0.5.0", git = "https://github.com/kaganege/spellbook.git", branch = "fix-zero-indexed-flags" }
 streaming-iterator = "0.1.9"
 string-offsets = "0.2.0"
 tempfile = "3"
@@ -67,7 +77,7 @@ tree-sitter-typescript = "0.23.2"
 tree-sitter-yaml = "0.7.2"
 tree-sitter-vhdl = { git = "https://github.com/jpt13653903/tree-sitter-vhdl", tag = "v1.3.1" }
 tree-sitter-zig = "<2"
-tree-sitter-c-sharp= "<0.24.0"
+tree-sitter-c-sharp = "<0.24.0"
 codebook-tree-sitter-latex = "<0.7.0"
 codebook-tree-sitter-typst = "<0.13.0"
 unicode-segmentation = "1.12.0"
